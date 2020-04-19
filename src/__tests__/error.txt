@@ -1,0 +1,50 @@
+ FAIL  src/__tests__/fetch.test.js
+  ✕ loads and displays greeting (7ms)
+
+  ● loads and displays greeting
+
+    TypeError: (0 , _react2.waitFor) is not a function
+
+      20 |   // Original in example https://testing-library.com/docs/react-testing-library/example-intro
+      21 |   // Test fails and console error about updates not wrapped in act(). See ./error.txt
+    > 22 |   await waitFor(() => screen.getByRole('heading'))
+         |         ^
+      23 | 
+      24 |   // Other suggested example with expect() inside waitFor's callback
+      25 |   // Test fails and console error about updates not wrapped in act()
+
+      at Object.<anonymous> (src/__tests__/fetch.test.js:22:9)
+
+  console.error node_modules/react-dom/cjs/react-dom.development.js:88
+    Warning: An update to Fetch inside a test was not wrapped in act(...).
+    
+    When testing, code that causes React state updates should be wrapped into act(...):
+    
+    act(() => {
+      /* fire events that update state */
+    });
+    /* assert on the output */
+    
+    This ensures that you're testing the behavior the user would see in the browser. Learn more at https://fb.me/react-wrap-tests-with-act
+        in Fetch (at fetch.test.js:12)
+
+  console.error node_modules/react-dom/cjs/react-dom.development.js:88
+    Warning: An update to Fetch inside a test was not wrapped in act(...).
+    
+    When testing, code that causes React state updates should be wrapped into act(...):
+    
+    act(() => {
+      /* fire events that update state */
+    });
+    /* assert on the output */
+    
+    This ensures that you're testing the behavior the user would see in the browser. Learn more at https://fb.me/react-wrap-tests-with-act
+        in Fetch (at fetch.test.js:12)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 1 total
+Snapshots:   0 total
+Time:        0.584s, estimated 1s
+Ran all test suites.
+
+Watch Usage: Press w to show more.
